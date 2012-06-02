@@ -3,8 +3,6 @@
 #include "MPIBase.h"
 #include "SortBase.h"
 
-class IO::File_IO;
-
 namespace COSP
 {
 	// Abstract class used as  base by the parallel sorting algorithms

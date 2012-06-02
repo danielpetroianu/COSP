@@ -9,7 +9,7 @@
     </MpiDebuggerApplicationArguments>
     <MpiDebuggerAdditionalMpiExecArguments>
     </MpiDebuggerAdditionalMpiExecArguments>
-    <MpiDebuggerNetworkSecurityMode>LocalSubnet</MpiDebuggerNetworkSecurityMode>
+    <MpiDebuggerNetworkSecurityMode>AnyAddress</MpiDebuggerNetworkSecurityMode>
     <MpiDebuggerSchedulerNode>localhost/4</MpiDebuggerSchedulerNode>
   </PropertyGroup>
 </Project>

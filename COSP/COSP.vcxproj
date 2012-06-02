@@ -59,11 +59,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>mpi.lib;mpe.lib;cxx.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>cxx.lib;fmpich2g.lib;fmpich2s.lib;mpe.lib;mpi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -92,6 +94,7 @@
     <ClInclude Include="Hyperquicksort.h" />
     <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="MPIBase.h" />
+    <ClInclude Include="MPISort.h" />
     <ClInclude Include="Quicksort.h" />
     <ClInclude Include="SortBase.h" />
   </ItemGroup>
@@ -101,16 +104,9 @@
     <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MPIBase.cpp" />
+    <ClCompile Include="MPISort.cpp" />
     <ClCompile Include="Quicksort.cpp" />
     <ClCompile Include="SortBase.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="C:\Program Files (x86)\MPICH2\lib\cxx.lib" />
-    <Library Include="C:\Program Files (x86)\MPICH2\lib\fmpich2.lib" />
-    <Library Include="C:\Program Files (x86)\MPICH2\lib\fmpich2g.lib" />
-    <Library Include="C:\Program Files (x86)\MPICH2\lib\fmpich2s.lib" />
-    <Library Include="C:\Program Files (x86)\MPICH2\lib\mpe.lib" />
-    <Library Include="C:\Program Files (x86)\MPICH2\lib\mpi.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

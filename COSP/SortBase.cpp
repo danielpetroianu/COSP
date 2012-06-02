@@ -1,58 +1,49 @@
-#include "stdafx.h"
 #include "SortBase.h"
 #include <time.h>
 #include <algorithm>
 
-namespace COSP
-{
-	SortBase::SortBase(void){}
-	SortBase::~SortBase(void){}
+COSP::SortBase::SortBase(void){}
+COSP::SortBase::~SortBase(void){}
 
-	void SortBase::Sort(IO::File_IO& file){
-		LOG::INFO("SortBase::Sort - BEGIN ( file name:"+ file.GetFileNameWithExtension() +" )");
+//void COSP::SortBase::Sort(IO::File_IO& file){
 
-		if( !_outputFile.IsOpen() ){
-			string fileName =  file.GetFilePath() +"output_"+ file.GetFileNameWithExtension();
-			_outputFile.Open(fileName , IO::WRITE_ONLY);
-		}
+//	if( !_outputFile.IsOpen() ){
+//		string fileName =  file.GetFilePath() +"output_"+ file.GetFileNameWithExtension();
+//		_outputFile.Open(fileName , IO::WRITE_ONLY);
+//	}
 
-		std::vector<int> numbers;
+//	std::vector<int> numbers;
 
-		int nr;
+//	int nr;
 
-		while( file >> nr )
-		{
-			numbers.push_back(nr);
-			LOG::INFO("SortBase::Sort - read " + ItoS(nr));
-		}
+//	while( file >> nr )
+//	{
+//		numbers.push_back(nr);
 
-		SortBase::Sort(numbers);
-		LOG::INFO("SortBase::Sort - END");
-	}
+//	}
 
-	void SortBase::Sort(std::vector<int>& numbers){
-		LOG::INFO("SortBase::Sort - BEGIN ( vector size:"+ ItoS(numbers.size()) +" )");
+//	SortBase::Sort(numbers);
+//}
 
-		if( !_outputFile.IsOpen() ){
-			string fileName =  GetCurrentDir() +"\\output_vector_size"+ ItoS(numbers.size())+".txt";
-			_outputFile.Open(fileName , IO::WRITE_ONLY);
-		}
+//void COSP::SortBase::Sort(std::vector<int>& numbers){
 
-		long start = clock(); // start stopwatch
+//	if( !_outputFile.IsOpen() ){
+//		string fileName =  GetCurrentDir() +"\\output_vector_size"+ ItoS(numbers.size())+".txt";
+//		_outputFile.Open(fileName , IO::WRITE_ONLY);
+//	}
 
-		SortAlgorithm(numbers);
+//	long start = clock(); // start stopwatch
 
-		double total_time = ((double)clock() - start) / CLOCKS_PER_SEC; //stop stopwatch
+//	SortAlgorithm(numbers);
 
-		LOG::INFO("SortBase::Sort - END time spent: ~"+ DtoS( total_time ) +"'s.");
-		//LOG::ARRAY_INT(numbers);
+//	double total_time = ((double)clock() - start) / CLOCKS_PER_SEC; //stop stopwatch
+//	//LOG::ARRAY_INT(numbers);
 
-		//write the sorted elements
-		if( _outputFile.IsOpen() ){
-			_outputFile << "sorted in ~" << DtoS( total_time ) << "'s." << endl;
-			for(int i = 0; i < numbers.size(); i++){
-				_outputFile << numbers.at(i) << endl;
-			};
-		}
-	}
-}
+//	//write the sorted elements
+//	if( _outputFile.IsOpen() ){
+//		_outputFile << "sorted in ~" << DtoS( total_time ) << "'s." << endl;
+//		for(int i = 0; i < numbers.size(); i++){
+//			_outputFile << numbers.at(i) << endl;
+//		};
+//	}
+//}

@@ -1,4 +1,3 @@
-#include "StdAfx.h"
 #include "Quicksort.h"
 #include <algorithm>
 #include <functional>
@@ -6,29 +5,23 @@
 
 using namespace std;
 
-namespace COSP
-{
 	template<class T>
-	Quicksort<T>::Quicksort(void)
+	COSP::Quicksort<T>::Quicksort(void)
 	{
 	}
 
 	template<class T>
-	Quicksort<T>::~Quicksort(void)
+	COSP::Quicksort<T>::~Quicksort(void)
 	{
 	}
 
 	template<class T>
-	void Quicksort<T>::SortAlgorithm(std::vector<T>& numbers){
-		LOG::INFO("Quicksort::Sort - BEGIN");
-
+	void COSP::Quicksort<T>::SortAlgorithm(std::vector<T>& numbers){
 		QSort(numbers.begin(), numbers.end());
-
-		LOG::INFO("Quicksort::Sort - END");
 	}
 
 	template<class T>
-	void Quicksort<T>::QSort(T begin, T end){
+	void COSP::Quicksort<T>::QSort(T begin, T end){
 		try{
 
 			if(begin != end ){
@@ -48,7 +41,7 @@ namespace COSP
 	}
 
 	template<class T>
-	void Quicksort<T>::QSortSubVector(std::vector<T>& numbers, int low_idx, int high_idx){
+	void COSP::Quicksort<T>::QSortSubVector(std::vector<T>& numbers, int low_idx, int high_idx){
 		int i, j;
 		try{
 			if (low_idx < high_idx )
@@ -57,12 +50,10 @@ namespace COSP
 				std::swap(numbers.at(low_idx), numbers.at(middle_idx));
 				int pivot = numbers.at(low_idx);
 
-				LOG::INFO("Quicksort::qsort low_idx:" + ItoS(low_idx) +" high:"+ ItoS(high_idx) +" pivot:" + ItoS(pivot));
-
 				i = low_idx + 1;
 				j = high_idx;
 
-				while (i <= j)					// while the scan indices from left and right have not met,
+				while (i <= j)	// while the scan indices from left and right have not met,
 				{
 					while ((i <= high_idx) && (numbers.at(i) <= pivot))	// from the left, look for the first
 						i++;												// element greater than the pivot
@@ -80,4 +71,3 @@ namespace COSP
 			LOG::EXCEPTION(e);
 		}
 	}
-}

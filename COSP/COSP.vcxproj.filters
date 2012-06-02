@@ -9,9 +9,8 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Main">
+      <UniqueIdentifier>{d419525f-e3e8-4fdb-9c99-21a84de4d789}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -33,11 +32,11 @@
     <ClInclude Include="SortBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MPISort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MPIBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -56,28 +55,11 @@
     <ClCompile Include="SortBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include=".\readme.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="C:\Program Files (x86)\MPICH2\lib\cxx.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
-    <Library Include="C:\Program Files (x86)\MPICH2\lib\fmpich2.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
-    <Library Include="C:\Program Files (x86)\MPICH2\lib\fmpich2g.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
-    <Library Include="C:\Program Files (x86)\MPICH2\lib\fmpich2s.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
-    <Library Include="C:\Program Files (x86)\MPICH2\lib\mpe.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
-    <Library Include="C:\Program Files (x86)\MPICH2\lib\mpi.lib">
-      <Filter>Resource Files</Filter>
-    </Library>
+    <ClCompile Include="MPISort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
