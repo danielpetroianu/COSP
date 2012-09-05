@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="COSP::BitonicMergesort" Collapsed="true">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAABCAAAAAAAAAAQAAAAAAAAAAAI=</HashCode>
+      <FileName>BitonicMergesort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COSP::Hyperquicksort" Collapsed="true">
+    <Position X="4.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAQCAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Hyperquicksort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COSP::InsertionSort" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAACAAAEAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>InsertionSort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COSP::MPIBase" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAKAAAAAAAAACgAAAAAAAgAQAIACSAQCAAAI=</HashCode>
+      <FileName>MPIBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COSP::MPISort" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAACIAAAAAAQAAAAAAACAAAA=</HashCode>
+      <FileName>MPISort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COSP::Quicksort&lt;T&gt;" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACACQAAAAAAAAAAAAAABAg=</HashCode>
+      <FileName>Quicksort.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COSP::SortBase" Collapsed="true">
+    <Position X="1.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAACAACAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>SortBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
