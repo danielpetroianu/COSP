@@ -10,10 +10,6 @@ namespace COSP
 	}
 
 	void  MPISort::SortAlgorithm(std::vector<int>& vect){
-		double start = MPI::Wtime();
-
-		MPIBase::Run(vect);
-
-		double end = MPI::Wtime();
+		Run(vect);
 	}
 }

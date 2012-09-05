@@ -22,7 +22,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v100</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -99,14 +99,19 @@
     <ClInclude Include="SortBase.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="berenger.eu.cpp" />
     <ClCompile Include="BitonicMergesort.cpp" />
     <ClCompile Include="Hyperquicksort.cpp" />
     <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MPIBase.cpp" />
     <ClCompile Include="MPISort.cpp" />
+    <ClCompile Include="pbmerge.cpp" />
     <ClCompile Include="Quicksort.cpp" />
     <ClCompile Include="SortBase.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

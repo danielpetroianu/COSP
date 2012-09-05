@@ -8,21 +8,14 @@ namespace COSP
 	class MPIBase
 	{
 	public:
+		//CONSTANTS
+		static const int MASTER = 0;
+
 		// Ctor
 		MPIBase(void);
 
 		// Dtor
 		virtual ~MPIBase(void);
-
-	protected:
-		// Main execution method
-		virtual void Run(std::vector<int>& );
-
-		// Execute the code for Master (PID = 0)
-		virtual void RunMaster(std::vector<int>& ) = 0;
-
-		// Execute the code for the SLAVES (PID != 0)
-		virtual void RunSlave(std::vector<int>& )  = 0;
 
 		// Initialize the MPI
 		void Init();
@@ -45,8 +38,18 @@ namespace COSP
 		// Check if the current process is Slave
 		bool IsSlave();
 
+	protected:
+		// Main execution method
+		virtual void Run(std::vector<int>& );
+
+		// Execute the code for Master (PID = 0)
+		virtual void RunMaster(std::vector<int>& ) = 0;
+
+		// Execute the code for the SLAVES (PID != 0)
+		virtual void RunSlave(std::vector<int>& )  = 0;
+
 	private:
 		int PID; // process ID
-		int NOP; // number of processes/node
+		int NOP; // number of processes/nodes
 	};
 }

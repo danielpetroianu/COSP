@@ -1,65 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="Main">
       <UniqueIdentifier>{d419525f-e3e8-4fdb-9c99-21a84de4d789}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OutsideSoures">
+      <UniqueIdentifier>{70261018-4517-4283-8808-ac557f1001d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{a5bed953-43da-421c-b7fe-770fc10e861f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LiniarSort">
+      <UniqueIdentifier>{e6575db2-7248-42cd-a33e-bb21579f12f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ParalelSort">
+      <UniqueIdentifier>{2a87c2c0-27f1-4189-94a6-7f0f930309aa}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MPIBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BitonicMergesort.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Hyperquicksort.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="InsertionSort.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Quicksort.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SortBase.h">
-      <Filter>Header Files</Filter>
+      <Filter>Base</Filter>
     </ClInclude>
     <ClInclude Include="MPISort.h">
-      <Filter>Header Files</Filter>
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="BitonicMergesort.h">
+      <Filter>ParalelSort</Filter>
+    </ClInclude>
+    <ClInclude Include="Hyperquicksort.h">
+      <Filter>ParalelSort</Filter>
+    </ClInclude>
+    <ClInclude Include="SortBase.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Quicksort.h">
+      <Filter>LiniarSort</Filter>
+    </ClInclude>
+    <ClInclude Include="InsertionSort.h">
+      <Filter>LiniarSort</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MPIBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BitonicMergesort.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Hyperquicksort.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="InsertionSort.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Quicksort.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SortBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MPISort.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="berenger.eu.cpp">
+      <Filter>OutsideSoures</Filter>
+    </ClCompile>
+    <ClCompile Include="pbmerge.cpp">
+      <Filter>OutsideSoures</Filter>
+    </ClCompile>
+    <ClCompile Include="BitonicMergesort.cpp">
+      <Filter>ParalelSort</Filter>
+    </ClCompile>
+    <ClCompile Include="Hyperquicksort.cpp">
+      <Filter>ParalelSort</Filter>
+    </ClCompile>
+    <ClCompile Include="Quicksort.cpp">
+      <Filter>LiniarSort</Filter>
+    </ClCompile>
+    <ClCompile Include="InsertionSort.cpp">
+      <Filter>LiniarSort</Filter>
+    </ClCompile>
+    <ClCompile Include="MPIBase.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="MPISort.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="SortBase.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include=".\readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

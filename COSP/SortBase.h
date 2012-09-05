@@ -13,7 +13,7 @@ namespace COSP
 		//void Sort(IO::File_IO& );
 
 		//High layer method that calls the proper sort method, to sort a vector
-		//void Sort(std::vector<int>& );
+		void Sort(std::vector<int>& );
 
 	protected:
 		// Ctor
@@ -25,7 +25,7 @@ namespace COSP
 		//Method implemented by the derived class, and it contains the algorithm logic
 		virtual void SortAlgorithm(std::vector<int>& ) = 0;
 
-	private:
+	//private:
 		//File_IO _outputFile;
 	};
 };

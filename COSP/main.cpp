@@ -1,7 +1,8 @@
 #include <mpi.h>
 #include <stdlib.h>
 #include <iostream>
-#include "MPIBase.h"
+#include "MPISort.h"
+#include "BitonicMergesort.h"
 
 using namespace COSP;
 using std::cout;
@@ -10,27 +11,19 @@ using std::endl;
 
 int main(int argc,char *argv[])
 {
-	MPI::Init(argc,argv);
+    MPI::Init(argc,argv);
+	
+	std::vector<int> test(10);
 
-	int NOP,
-		PID,
-		namelen;
-    char processor_name[MPI_MAX_PROCESSOR_NAME];
+	MPISort *sortAlg = new BitonicMergesort();
 
-	double start = MPI::Wtime();
+	sortAlg->Sort(test);
+	
+	//cout << "Process #" << sortAlg->GetPID() << "/" << sortAlg->GetNOP() << endl;
 
-	NOP		= MPI::COMM_WORLD.Get_size();
-    PID     = MPI::COMM_WORLD.Get_rank();
+   
 
-	MPI::Get_processor_name(processor_name,namelen);
+    MPI::Finalize();
 
-	cout << "Process #" << PID << "/" << NOP << " is on " << processor_name << endl;
-
-	double end = MPI::Wtime();
-
-	cout << "time #" << end - start;
-
-	MPI::Finalize();
-
-	return EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 }

@@ -11,5 +11,6 @@
     </MpiDebuggerAdditionalMpiExecArguments>
     <MpiDebuggerNetworkSecurityMode>AnyAddress</MpiDebuggerNetworkSecurityMode>
     <MpiDebuggerSchedulerNode>localhost/4</MpiDebuggerSchedulerNode>
+    <MpiDebuggerApplicationCommand>$(TargetFileName)</MpiDebuggerApplicationCommand>
   </PropertyGroup>
 </Project>
