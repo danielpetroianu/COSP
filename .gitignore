@@ -12,13 +12,17 @@
 *.a
 
 # Folders
-/Bin
+[Bb]in
+[Dd]ebug*/
 /ipch
-/COSP/Debug
+obj/
+[Rr]elease*/
+_ReSharper*/
+[Tt]est[Rr]esult*
 
 # Other Files
 *.sdf
-/COSP.suo
+*.suo
 Thumbs.db
 *.obj
 *.exe
@@ -37,11 +41,6 @@ Thumbs.db
 *.cache
 *.ilk
 *.log
-[Bb]in
-[Dd]ebug*/
 *.lib
 *.sbr
-obj/
-[Rr]elease*/
-_ReSharper*/
-[Tt]est[Rr]esult*
+*.opensdf
