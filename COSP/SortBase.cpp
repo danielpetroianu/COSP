@@ -34,5 +34,4 @@ void COSP::SortBase::Sort(std::vector<int>& numbers){
 
 	double total_time = ((double)clock() - start) / CLOCKS_PER_SEC; //stop stopwatch
 
-	std::cout<< "done sorting in " << total_time << "s" << std::endl;
 }

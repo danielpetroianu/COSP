@@ -2,7 +2,7 @@
 
 #include <vector>
 
-namespace COSP
+namespace COSP 
 {
 	// Abstract class used as base for sequential sorting algorithms
 	class SortBase
@@ -24,8 +24,5 @@ namespace COSP
 
 		//Method implemented by the derived class, and it contains the algorithm logic
 		virtual void SortAlgorithm(std::vector<int>& ) = 0;
-
-	//private:
-		//File_IO _outputFile;
 	};
 };

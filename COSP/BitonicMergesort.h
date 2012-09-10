@@ -18,8 +18,6 @@ namespace COSP
 		~BitonicMergesort(void);
 
 	private:
-		void RunMaster(std::vector<int>&);
-		void RunSlave(std::vector<int>&);
 		void Run(std::vector<int>&);
 	};
 }

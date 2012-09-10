@@ -18,10 +18,6 @@ int main(int argc,char *argv[])
 	MPISort *sortAlg = new BitonicMergesort();
 
 	sortAlg->Sort(test);
-	
-	//cout << "Process #" << sortAlg->GetPID() << "/" << sortAlg->GetNOP() << endl;
-
-   
 
     MPI::Finalize();
 

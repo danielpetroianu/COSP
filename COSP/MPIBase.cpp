@@ -2,7 +2,7 @@
 #include <mpi.h>
 
 
-COSP::MPIBase::MPIBase(void) : NOP(-1), PID(-1){
+COSP::MPIBase::MPIBase(void) : _NOP(-1), _PID(-1){
 	Init();
 }
 
@@ -14,8 +14,8 @@ void COSP::MPIBase::Init(){
 	if(!MPI::Is_initialized()){
 		MPI::Init();
 	}
-	NOP = MPI::COMM_WORLD.Get_size();
-	PID = MPI::COMM_WORLD.Get_rank();
+	_NOP = MPI::COMM_WORLD.Get_size();
+	_PID = MPI::COMM_WORLD.Get_rank();
 
 }
 
@@ -24,35 +24,28 @@ void COSP::MPIBase::Init(int& argc, char**& argv){
 		MPI::Init(argc,argv);
 	}
 
-	NOP = MPI::COMM_WORLD.Get_size();
-	PID = MPI::COMM_WORLD.Get_rank();
+	_NOP = MPI::COMM_WORLD.Get_size();
+	_PID = MPI::COMM_WORLD.Get_rank();
 }
 
 void COSP::MPIBase::Finalize(void){
-
 	if(!MPI::Is_finalized()){
 		MPI::Finalize();
 	}
 
-	NOP = PID = -1;
+	_NOP = _PID = -1;
 }
 
 void COSP::MPIBase::Run(std::vector<int>& numbers){
 	IsMaster() ? RunMaster(numbers) : RunSlave(numbers);
 }
 
-int COSP::MPIBase::GetPID(){
-	return PID;
-}
+void COSP::MPIBase::RunMaster(std::vector<int>& vnr) {}
+void COSP::MPIBase::RunSlave(std::vector<int>& vnr)  {}
 
-int COSP::MPIBase::GetNOP(){
-	return NOP;
-}
+int  COSP::MPIBase::GetPID() {return _PID; }
+int  COSP::MPIBase::GetNOP() {return _NOP; }
 
-bool COSP::MPIBase::IsMaster(){
-	return PID == MASTER;
-}
+bool COSP::MPIBase::IsMaster(){ return _PID == MASTER; }
+bool COSP::MPIBase::IsSlave() { return _PID != MASTER; }
 
-bool COSP::MPIBase::IsSlave(){
-	return PID != MASTER;
-}

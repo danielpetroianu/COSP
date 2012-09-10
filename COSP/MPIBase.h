@@ -7,7 +7,7 @@ namespace COSP
 	// Abstract class that wraps the MPICH2 implementation.
 	class MPIBase
 	{
-	public:
+	protected:
 		//CONSTANTS
 		static const int MASTER = 0;
 
@@ -38,18 +38,17 @@ namespace COSP
 		// Check if the current process is Slave
 		bool IsSlave();
 
-	protected:
 		// Main execution method
 		virtual void Run(std::vector<int>& );
 
 		// Execute the code for Master (PID = 0)
-		virtual void RunMaster(std::vector<int>& ) = 0;
+		virtual void RunMaster(std::vector<int>& );
 
 		// Execute the code for the SLAVES (PID != 0)
-		virtual void RunSlave(std::vector<int>& )  = 0;
+		virtual void RunSlave(std::vector<int>& );
 
 	private:
-		int PID; // process ID
-		int NOP; // number of processes/nodes
+		int _PID; // process ID
+		int _NOP; // number of processes/nodes
 	};
 }

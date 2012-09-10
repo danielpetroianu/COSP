@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LocalDebuggerCommand>$(TargetPath)</LocalDebuggerCommand>
-    <DebuggerFlavor>MpiClusterDebugger</DebuggerFlavor>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <MpiDebuggerMpiExecCommand>$(ProgramFiles)\MPICH2\bin\mpiexec.exe</MpiDebuggerMpiExecCommand>
     <MpiDebuggerShimLocation>$(ProgramFiles)\Microsoft Visual Studio 10.0\Common7\IDE\Remote Debugger\x86\mpishim100.exe</MpiDebuggerShimLocation>
     <MpiDebuggerApplicationArguments>
