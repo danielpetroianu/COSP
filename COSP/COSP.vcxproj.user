@@ -12,5 +12,7 @@
     <MpiDebuggerNetworkSecurityMode>AnyAddress</MpiDebuggerNetworkSecurityMode>
     <MpiDebuggerSchedulerNode>localhost/4</MpiDebuggerSchedulerNode>
     <MpiDebuggerApplicationCommand>$(TargetFileName)</MpiDebuggerApplicationCommand>
+    <LocalDebuggerCommandArguments>HQS</LocalDebuggerCommandArguments>
+    <LocalDebuggerEnvironment>ALG HQS</LocalDebuggerEnvironment>
   </PropertyGroup>
 </Project>
