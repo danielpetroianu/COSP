@@ -27,10 +27,10 @@ namespace COSP
 		void Finalize(void);
 
 		// Get the Process ID
-		int GetPID();
+		int PID();
 
 		// Get the number or processes
-		int GetNOP();
+		int NOP();
 
 		// Check if the current process is Master
 		bool IsMaster();

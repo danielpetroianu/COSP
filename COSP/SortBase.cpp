@@ -1,6 +1,4 @@
 #include "SortBase.h"
-#include <time.h>
-#include <algorithm>
 #include <iostream>
 
 COSP::SortBase::SortBase(void){}
@@ -26,12 +24,11 @@ COSP::SortBase::~SortBase(void){}
 //	SortBase::Sort(numbers);
 //}
 
+void COSP::SortBase::Sort(int arr[] ){
+	std::vector<int> vect(arr, arr + sizeof(arr) / sizeof(*arr));
+	SortAlgorithm(vect);
+}
+
 void COSP::SortBase::Sort(std::vector<int>& numbers){
-
-	long start = clock(); // start stopwatch
-
 	SortAlgorithm(numbers);
-
-	double total_time = ((double)clock() - start) / CLOCKS_PER_SEC; //stop stopwatch
-
 }

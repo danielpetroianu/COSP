@@ -43,8 +43,8 @@ void COSP::MPIBase::Run(std::vector<int>& numbers){
 void COSP::MPIBase::RunMaster(std::vector<int>& vnr) {}
 void COSP::MPIBase::RunSlave(std::vector<int>& vnr)  {}
 
-int  COSP::MPIBase::GetPID() {return _PID; }
-int  COSP::MPIBase::GetNOP() {return _NOP; }
+int  COSP::MPIBase::PID() {return _PID; }
+int  COSP::MPIBase::NOP() {return _NOP; }
 
 bool COSP::MPIBase::IsMaster(){ return _PID == MASTER; }
 bool COSP::MPIBase::IsSlave() { return _PID != MASTER; }

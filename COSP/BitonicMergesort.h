@@ -19,5 +19,7 @@ namespace COSP
 
 	private:
 		void Run(std::vector<int>&);
+
+		void mergesort(std::vector<int>& ,const int , const int ,const int );
 	};
 }

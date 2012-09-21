@@ -14,6 +14,7 @@ namespace COSP
 
 		//High layer method that calls the proper sort method, to sort a vector
 		void Sort(std::vector<int>& );
+		void Sort(int[] );
 
 	protected:
 		// Ctor
